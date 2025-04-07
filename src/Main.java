@@ -16,7 +16,6 @@ public class Main {
         notas.add(10.0);
         notas.add(8.0);
         notas.add(9.0);
-        notas.add(7.0);
         Aluno aluno = new Aluno("Lucas", notas);
         System.out.println(aluno.mediaAluno());
 
