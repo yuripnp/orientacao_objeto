@@ -1,6 +1,8 @@
+import calculadora.CalculadoraDeTempo;
 import model.*;
 
 import java.math.BigDecimal;
+import java.time.Duration;
 import java.time.LocalDate;
 import java.util.ArrayList;
 
@@ -9,6 +11,20 @@ public class Main {
         Movie movie = new Movie();
         Pessoa pessoa = new Pessoa();
         Musica musica = new Musica();
+        Serie serie = new Serie();
+        serie.setSeasons(5);
+        serie.setEpisodes(50);
+        serie.setStatus("Finalizada");
+        serie.setEpisodesForseason(10);
+        serie.setDuration(Duration.ofMinutes(45));
+        serie.setTitle("Breaking Bad");
+        serie.setReleaseYear(2008);
+        serie.setGenre("Drama");
+        serie.exibir();
+
+        CalculadoraDeTempo calculadoraDeTempo = new CalculadoraDeTempo();
+        Duration tempoTotal = calculadoraDeTempo.calcularTempoTotal(serie.getSeasons(), serie.getEpisodes(), serie);
+        System.out.println("Tempo total da série: " + tempoTotal.toHours() + " horas");
         Calculadora calculadora = new Calculadora();
         Carro carro = new Carro();
         Produto produto = new Produto();
@@ -18,6 +34,7 @@ public class Main {
         notas.add(9.0);
         Aluno aluno = new Aluno("Lucas", notas);
         System.out.println(aluno.mediaAluno());
+
 
 
 
