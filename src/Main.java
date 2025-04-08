@@ -1,4 +1,6 @@
 import calculadora.CalculadoraDeTempo;
+import calculadora.Classificavel;
+import calculadora.Recomendacao;
 import model.*;
 
 import java.math.BigDecimal;
@@ -34,6 +36,17 @@ public class Main {
         notas.add(9.0);
         Aluno aluno = new Aluno("Lucas", notas);
         System.out.println(aluno.mediaAluno());
+        Recomendacao recomendacao = new Recomendacao();
+
+        Episode episode = new Episode();
+        episode.setTitle("Pilot");
+        episode.setSeason(1);
+        episode.setEpisodeNumber(1);
+        episode.setSerie(serie);
+        episode.setTotalViews(1500);
+        System.out.println("Classificação do episódio: " + episode.getClassificacao());
+        recomendacao.recomendar(episode);
+
 
 
 
