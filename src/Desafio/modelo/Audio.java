@@ -8,6 +8,7 @@ public class Audio {
     private int TotalReproductions;
     private int likes;
     private String genre;
+    private int recomendation;
 
     public void curtir() {
         likes++;
@@ -16,7 +17,9 @@ public class Audio {
         TotalReproductions++;
     }
 
-
+    public int getRecomendation() {
+        return recomendation;
+    }
     public String getGenre() {
         return genre;
     }

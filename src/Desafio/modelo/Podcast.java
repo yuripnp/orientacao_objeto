@@ -12,6 +12,19 @@ public class Podcast extends Audio {
         this.description = description;
     }
 
+    @Override
+    public int getRecomendation() {
+        if(this.getLikes() > 5) {
+            return 5;
+        } else if (this.getLikes() > 3) {
+            return 3;
+        } else if (this.getLikes() > 1) {
+            return 1;
+        } else {
+            return 0;
+        }
+    }
+
     public String getHost() {
         return host;
     }

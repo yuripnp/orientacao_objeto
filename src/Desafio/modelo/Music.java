@@ -12,6 +12,19 @@ public class Music extends Audio {
         this.releaseDate = releaseDate;
     }
 
+    @Override
+    public int getRecomendation() {
+        if(this.getTotalReproductions() > 20) {
+            return 5;
+        } else if (this.getTotalReproductions() > 10) {
+            return 3;
+        } else if (this.getTotalReproductions() > 5) {
+            return 1;
+        } else {
+            return 0;
+        }
+    }
+
     public String getArtist() {
         return artist;
     }
